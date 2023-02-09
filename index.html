@@ -44,8 +44,8 @@
        </div>
        <div class="cols cols1">
         <div class="imgbox">
-          <img src="" alt="splash" id="splash">
-          <img src="" alt="profile">
+          <img src="./img/splash.png" alt="splash" id="splash">
+          <img src="./img/profile.png" id="profile" alt="profile">
         </div>
        </div>
 
@@ -63,6 +63,14 @@
     backSpeed:80,
     backDelay:1500
   })
+  var images = ["./img/moaze.png","./img/profile.png"];
+  var index = 0;
+
+  function displayNextImage() {
+    document.getElementById("profile").src = images[index];
+    index = (index + 1) % images.length;
+  }
+  setInterval(displayNextImage, 5000);
  </script>
 </body>
 </html>
