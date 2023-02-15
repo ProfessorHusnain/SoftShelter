@@ -7,11 +7,11 @@
 }
 body{
 	overflow: hidden;
-	background-color: #f3f5f8;
 }
 .container{
 	width: 100%;
 	min-height: 100vh;
+	background-color: #f3f5f8;
 }
 nav{
 	display: flex;
@@ -51,7 +51,6 @@ b{
 .links a:hover{
 	color: #7f00f7;
 }
- 
 .links a{
 	font-size: 30px;
 	color: #3d535f;
@@ -76,7 +75,6 @@ b{
 	top: 40%;
 	background: linear-gradient(45deg,#7f00ff,pink);
 	animation: object1 6s linear infinite;
-	z-index: -15;
 }
 .wrapper::after{
 	position: absolute;
@@ -165,7 +163,6 @@ button:hover{
 	position: fixed;
 	bottom: 50px;
 	right: 13vw;
-	z-index: -10;
 }
 .imgbox img{
 	position: relative;
@@ -265,7 +262,7 @@ nav{
 }
 @media only screen and (max-width: 850px){
 	nav{
-	 display:block
+	 display:block;
 	}
 	button{
 		margin: 10px 5px;
@@ -297,12 +294,8 @@ nav{
 		}
 	}
  }
- .cols p{
-	font-weight: 700;
+ @media only screen and (max-width: 450px){
+	.wrapper::before {
+		display: none;
+	}
  }
-.multiText{
-	
-}
-.wrapper strong{
-	display: block;
-}
